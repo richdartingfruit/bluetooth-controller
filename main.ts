@@ -18,6 +18,10 @@ basic.forever(function () {
         str = bluetooth.uartReadUntil(serial.delimiters(Delimiters.NewLine))
         if (str == "B") {
             basic.showString("go")
+        } else if (str == "A") {
+            basic.showString("AP")
+        } else if (str == "0") {
+            basic.showIcon(IconNames.SmallSquare)
         } else {
             basic.showString(str)
         }
